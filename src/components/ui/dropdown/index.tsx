@@ -1,0 +1,21 @@
+import React from 'react';
+
+interface IDropdownProps {
+  primary?: boolean;
+  label: string;
+}
+
+const Dropdown: React.FC<IDropdownProps> = (props) => {
+  return (
+    <>
+      <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </>
+  );
+};
+
+export default Dropdown;
