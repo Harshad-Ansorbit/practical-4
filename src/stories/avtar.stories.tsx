@@ -14,13 +14,26 @@ export default {
 
 const Template: ComponentStory<typeof Avtar> = (args) => <Avtar {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
+export const FullRounded = Template.bind({});
+FullRounded.args = {
+  fullrounded: true,
   label: 'Primary',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const SemiRounded = Template.bind({});
+SemiRounded.args = {
+  semirounded: true,
   label: 'Secondary',
+};
+
+export const Shadow = Template.bind({});
+Shadow.args = {
+  shadow: true,
+};
+
+export const Dashed = Template.bind({});
+Dashed.args = {
+  fullrounded: true,
+  shadow: true,
+  dashed: true,
 };

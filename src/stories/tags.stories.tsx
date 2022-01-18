@@ -1,44 +1,43 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Dropdown from '../components/ui/dropdown';
+import Tags from '../components/ui/tags';
 
 export default {
-  title: 'Example/Dropdown',
-  component: Dropdown,
+  title: 'Example/Tags',
+  component: Tags,
 
   argTypes: {
     backgroundColor: { control: 'color' },
+    size: {
+      control: { type: 'radio' },
+      options: ['large', 'normal', 'small'],
+    },
   },
-} as ComponentMeta<typeof Dropdown>;
+} as ComponentMeta<typeof Tags>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => (
-  <Dropdown {...args} />
-);
+const Template: ComponentStory<typeof Tags> = (args) => <Tags {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'select primary',
-  rounded: true,
+  label: 'Primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'select secondary',
-  rounded: true,
+  secondary: true,
+  label: 'Secondary',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'select Large',
-  rounded: true,
+  label: 'Large',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'select Small',
-  rounded: true,
+  label: 'Small',
 };

@@ -9,6 +9,10 @@ export default {
 
   argTypes: {
     backgroundColor: { control: 'color' },
+    size: {
+      control: { type: 'radio' },
+      options: ['large', 'normal', 'small'],
+    },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -18,7 +22,6 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Primary',
-  icon: true,
 };
 
 export const Secondary = Template.bind({});
@@ -36,4 +39,10 @@ export const Small = Template.bind({});
 Small.args = {
   size: 'small',
   label: 'Small',
+};
+
+export const IconButton = Template.bind({});
+IconButton.args = {
+  icon: true,
+  label: 'button',
 };
